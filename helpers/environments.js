@@ -1,3 +1,4 @@
+/* eslint-disable operator-linebreak */
 /*
  *Title: Environments
  *Description: Handle all envitonment related things
@@ -12,11 +13,13 @@ const environments = {};
 environments.staging = {
     port: 3000,
     envName: 'staging',
+    secretKey: 'dhakfjgdjshgfjska',
 };
 
 environments.production = {
     port: 5000,
     envName: 'production',
+    secretKey: '7ewthjdvmdskhifuds',
 };
 
 // determine which env was passed

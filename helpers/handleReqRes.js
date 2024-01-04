@@ -12,6 +12,8 @@ const { StringDecoder } = require('string_decoder');
 const routes = require('../routes');
 
 const { notFoundHandler } = require('../handlers/routeHandlers/notFoundHandler');
+const { parseJSON } = require('./utilities');
+
 // module Scaffold
 const handler = {};
 
@@ -34,6 +36,7 @@ handler.handleReqRes = (req, res) => {
         headersObject,
     };
     const decoder = new StringDecoder('utf-8');
+    // eslint-disable-next-line no-unused-vars
     let realData = '';
 
     const chosenHandler = routes[trimmedpath] ? routes[trimmedpath] : notFoundHandler;
@@ -45,18 +48,23 @@ handler.handleReqRes = (req, res) => {
     req.on('end', () => {
         realData += decoder.end();
 
+        requestProperties.body = parseJSON(realData);
+
         chosenHandler(requestProperties, (statusCode, payload) => {
+            // eslint-disable-next-line no-param-reassign
             statusCode = typeof statusCode === 'number' ? statusCode : 500;
+            // eslint-disable-next-line no-param-reassign
             payload = typeof payload === 'object' ? payload : {};
 
             const payloadString = JSON.stringify(payload);
 
+            res.setHeader('Content-Type', 'application/json');
             res.writeHead(statusCode);
             res.end(payloadString);
         });
 
         // response handling
-        res.end('Hello Worlds');
+        // res.end('Hello Worlds');
     });
 };
 

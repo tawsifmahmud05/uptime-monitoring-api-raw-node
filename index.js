@@ -26,9 +26,9 @@ const app = {};
 //     console.log('Error was', err);
 // });
 
-data.delete('test', 'newFile', (err) => {
-    console.log(err);
-});
+// data.delete('test', 'newFile', (err) => {
+//     console.log(err);
+// });
 // create server
 app.createserver = () => {
     const server = http.createServer(app.handleReqRes);
