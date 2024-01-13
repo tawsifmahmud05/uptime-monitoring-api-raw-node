@@ -1,6 +1,7 @@
 /*
  *Title: User Handler
  *Description: Route Handler to handle user related routes
+ *Author: Tawsif Mahmud
  *Date: 04/01/2024
  *
  */

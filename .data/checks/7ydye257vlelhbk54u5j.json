@@ -1,0 +1,11 @@
+{
+  "id": "7ydye257vlelhbk54u5j",
+  "userPhone": "01892567644",
+  "protocol": "https",
+  "url": "facebook.com",
+  "method": "GET",
+  "successCodes": [200, 201],
+  "timeoutSeconds": 2,
+  "state": "down",
+  "lastChecked": 1705126766544
+}

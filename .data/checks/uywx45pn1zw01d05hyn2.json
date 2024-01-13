@@ -1,0 +1,11 @@
+{
+  "id": "uywx45pn1zw01d05hyn2",
+  "userPhone": "01892567644",
+  "protocol": "https",
+  "url": "pipilika.com",
+  "method": "GET",
+  "successCodes": [200, 201],
+  "timeoutSeconds": 2,
+  "state": "down",
+  "lastChecked": 1705126768186
+}

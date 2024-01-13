@@ -1,0 +1,11 @@
+{
+  "id": "fpbh54hcphrupkee6hff",
+  "userPhone": "01892567644",
+  "protocol": "https",
+  "url": "instagram.com",
+  "method": "GET",
+  "successCodes": [200, 201],
+  "timeoutSeconds": 2,
+  "state": "down",
+  "lastChecked": 1705126766649
+}
